@@ -22,7 +22,7 @@ OBS: Foi feito usando FASTAPI e Webdriver, pelo fato de não ter acesso ao banco
 - Perfil: Verifica o perfil e retorna os dados visíveis do usuário, como nome e até e-mail.
 - Cursos: Verifica os cursos que esta sendo realizado e retorna-as.
 
-[UNIBASLSAS](https://www.unibalsas.edu.br/)
+[UNIBALSAS](https://www.unibalsas.edu.br/)
 
 A aplicação funciona assim:
 Quando receber a solicitação URL com tal função, ela executa o WEBDRIVER junto do SELENIUM que busca as tags XPATH dos dados que tal função precisa e as retorna-os em formato JSON 
