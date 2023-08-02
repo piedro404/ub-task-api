@@ -1,7 +1,6 @@
 # API de Tarefas - Unibalsas 
 
 [![Status](https://img.shields.io/badge/status-on-brightgreen)](https://api-ub.pedroplayborges.repl.co)
-[![GitHub license](https://img.shields.io/github/license/piedro404/cpf-validation-api)](https://github.com/piedro404/ub-task-api/blob/main/LICENSE)
 
 Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde é postada as atividades. Ela permite que você recupere e se mantenha atualizada as atividades do portal, além de outros pontos como dados dos usuários e cursos. Hospedada provisoriamente para testes em [https://api-ub.pedroplayborges.repl.co](https://api-ub.pedroplayborges.repl.co).
 
@@ -121,10 +120,5 @@ Certifique-se de ter o Python 3 instalado. Você também pode criar um ambiente 
    ```
 2. A API será executada localmente em http://localhost:8000.
 
-## Licença
-Este projeto está licenciado sob a Licença MIT. Por favor, inclua a seguinte referência no seu trabalho derivado:
-<br>
-- API de Tarefas - Unibalsas - desenvolvida por [Piedro404](https://github.com/piedro404) sob a Licença MIT.
-
-
+## Sobre
 Obrigado a todos, desejo otimos estudos, caso queira, entre em contato em pedro.henrique.martins404@gmail.com.
