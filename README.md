@@ -1,8 +1,8 @@
 # API de Tarefas - Unibalsas 
 
-[![Status](https://img.shields.io/badge/status-on-brightgreen)](https://api-ub.pedroplayborges.repl.co)
+[![Status](https://img.shields.io/badge/status-on-brightgreen)](https://ub-task-api.vercel.app/)
 
-Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde é postada as atividades. Ela permite que você recupere e se mantenha atualizada as atividades do portal, além de outros pontos como dados dos usuários e cursos. Hospedada provisoriamente para testes em [https://api-ub.pedroplayborges.repl.co](https://api-ub.pedroplayborges.repl.co).
+Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde é postada as atividades. Ela permite que você recupere e se mantenha atualizada as atividades do portal, além de outros pontos como dados dos usuários e cursos. Hospedada provisoriamente para testes em [https://ub-task-api.vercel.app/](https://ub-task-api.vercel.app/).
 
 ![2023-08-10_13h55_03](https://github.com/piedro404/ub-task-api/assets/88720549/9a2608a7-0583-4623-8011-3a9933e2c929)
 
@@ -23,10 +23,10 @@ Quando receber a solicitação URL com tal função, ela executa as Requests e b
 
 ## Documentação
 
-Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) para obter informações detalhadas sobre os endpoints, parâmetros e testes de requisições.
+Acesse a [documentação da API](https://ub-task-api.vercel.app/docs) para obter informações detalhadas sobre os endpoints, parâmetros e testes de requisições.
 
 ### Como usar
-1. Rota principal ("/"): Retorna um JSON com uma descrição da API. <br>(https://api-ub.pedroplayborges.repl.co/)
+1. Rota principal ("/"): Retorna um JSON com uma descrição da API. <br>(https://ub-task-api.vercel.app/)
 
 ```bash
 {
@@ -35,7 +35,7 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
   "Version": "2.5v"
 }
 ```
-2. Rota de Tarefas ("/ub/atv/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa das tarefas. <br>(https://api-ub.pedroplayborges.repl.co/ub/atv/{log}&{ps})
+2. Rota de Tarefas ("/ub/atv/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa das tarefas. <br>(https://ub-task-api.vercel.app/ub/atv/{log}&{ps})
 
 ```bash
 {
@@ -55,7 +55,7 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
   ]
 }
 ```
-3. Rota de Perfil ("/ub/perfil/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://api-ub.pedroplayborges.repl.co/ub/perfil/{log}&{ps})
+3. Rota de Perfil ("/ub/perfil/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://ub-task-api.vercel.app/ub/perfil/{log}&{ps})
 
 ```bash
 {
