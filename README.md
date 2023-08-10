@@ -4,7 +4,7 @@
 
 Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde é postada as atividades. Ela permite que você recupere e se mantenha atualizada as atividades do portal, além de outros pontos como dados dos usuários e cursos. Hospedada provisoriamente para testes em [https://api-ub.pedroplayborges.repl.co](https://api-ub.pedroplayborges.repl.co).
 
-![2023-08-10_10h04_27](https://github.com/piedro404/ub-task-api/assets/88720549/74004a25-6ec8-458d-84ea-f83b04ccb33b)
+![2023-08-10_13h55_03](https://github.com/piedro404/ub-task-api/assets/88720549/9a2608a7-0583-4623-8011-3a9933e2c929)
 
 ### Tarefas
 ![2023-08-10_01h19_34](https://github.com/piedro404/ub-task-api/assets/88720549/96ec8d1d-7e26-4ac5-8d4f-e66296fddb16)
