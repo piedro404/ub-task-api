@@ -58,23 +58,6 @@ async def ub_p(log:str,ps:str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/ub/mat/{log}&{ps}", tags=["UB", "Cursos"])
-async def ub_m(log:str,ps:str):
-    """
-    Rota para obter informações sobre os cursos do aluno.
-
-    Parâmetros:
-        - log (str): O nome de usuário ou login do aluno.
-        - ps (str): A senha do aluno.
-
-    Retorna:
-        Um JSON contendo informações sobre os cursos.
-    """
-    try:
-        return ub.ub_mat(log,ps)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
 # Executa a API
 if __name__ == "__main__":
     uvicorn.run(app)
