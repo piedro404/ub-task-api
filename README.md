@@ -4,8 +4,6 @@
 
 Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde é postada as atividades. Ela permite que você recupere e se mantenha atualizada as atividades do portal, além de outros pontos como dados dos usuários e cursos. Hospedada provisoriamente para testes em [https://api-ub.pedroplayborges.repl.co](https://api-ub.pedroplayborges.repl.co).
 
-OBS: Foi feito usando FASTAPI e Webdriver, pelo fato de não ter acesso ao banco de dados, podendo ocasionar erros. A aplicação teste também pode cair a qualquer momento, pelo fato de ser provisoria
-
 ![2023-08-10_10h04_27](https://github.com/piedro404/ub-task-api/assets/88720549/74004a25-6ec8-458d-84ea-f83b04ccb33b)
 
 ### Tarefas
@@ -21,7 +19,7 @@ OBS: Foi feito usando FASTAPI e Webdriver, pelo fato de não ter acesso ao banco
 [UNIBALSAS](https://www.unibalsas.edu.br/)
 
 A aplicação funciona assim:
-Quando receber a solicitação URL com tal função, ela executa o WEBDRIVER junto do SELENIUM que busca as tags XPATH dos dados que tal função precisa e as retorna-os em formato JSON 
+Quando receber a solicitação URL com tal função, ela executa as Requests e busca a estrutura do site bruta e as retorna-os em formato JSON 
 
 ## Documentação
 
