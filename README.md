@@ -14,13 +14,9 @@ OBS: Foi feito usando FASTAPI e Webdriver, pelo fato de não ter acesso ao banco
 ### Perfil
 ![2023-08-10_01h20_07](https://github.com/piedro404/ub-task-api/assets/88720549/b0ba6187-1b07-4da1-9421-a0a315753a56)
 
-### Cursos
-![2023-08-10_01h20_28](https://github.com/piedro404/ub-task-api/assets/88720549/ef1f9596-b79d-4369-89b2-26e70f583651)
-
 ## Recursos
 - Tarefas: Verifica se há tarefas e as retornas, como nome da matéria e da atividade, data de entrega e link da atividade.
 - Perfil: Verifica o perfil e retorna os dados visíveis do usuário, como nome e até e-mail.
-- Cursos: Verifica os cursos que esta sendo realizado e retorna-as.
 
 [UNIBALSAS](https://www.unibalsas.edu.br/)
 
@@ -69,38 +65,6 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
   "name": "PEDRO HENRIQUE MARTINS BORGES",
   "email": "pedro.borges@alu.unibalsas.edu.br",
   "language": "português"
-}
-```
-4. Rota de Perfil ("/ub/mat/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://api-ub.pedroplayborges.repl.co/ub/mat/{log}&{ps})
-
-```bash
-{
-  "status": true,
-  "mat": true,
-  "description": "Há 5 curso(s)!",
-  "qtd": 5,
-  "list": [
-    {
-      "name": "ANÁLISE E ENGENHARIA DE SISTEMAS",
-      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2055"
-    },
-    {
-      "name": "EMPREENDEDORISMO",
-      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2335"
-    },
-    {
-      "name": "LABORATÓRIO DE REDES E AUTOMAÇÃO",
-      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2353"
-    },
-    {
-      "name": "PARADIGMAS DE PROGRAMAÇÃO E INTERFACES",
-      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2355"
-    },
-    {
-      "name": "REDES DE COMPUTADORES",
-      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2336"
-    }
-  ]
 }
 ```
 
