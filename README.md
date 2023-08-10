@@ -37,7 +37,7 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
 {
   "Status": true,
   "Description": "API UB ON!",
-  "Version": "2.0v"
+  "Version": "2.5v"
 }
 ```
 2. Rota de Tarefas ("/ub/atv/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa das tarefas. <br>(https://api-ub.pedroplayborges.repl.co/ub/atv/{log}&{ps})
@@ -45,10 +45,19 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
 ```bash
 {
   "status": true,
-  "atv": false,
-  "description": "Não tem atividade pendentes!",
-  "qtd": 0,
-  "list": null
+  "atv": true,
+  "description": "Há 1 atividade(s) pendente(s)!",
+  "qtd": 1,
+  "list": [
+    {
+      "mat": "ANÁLISE E ENGENHARIA DE SISTEMAS",
+      "name": "Trabalho escrito: instruções sobre pesquisa acadêmica. está marcado(a) para esta data",
+      "day_week": "segunda-feira",
+      "date": "14 agosto",
+      "time_limit": "00:00  AM",
+      "link_atv": "https://ead.unibalsas.edu.br/mod/assign/view.php?id=8601"
+    }
+  ]
 }
 ```
 3. Rota de Perfil ("/ub/perfil/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://api-ub.pedroplayborges.repl.co/ub/perfil/{log}&{ps})
@@ -58,8 +67,7 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
   "status": true,
   "name": "PEDRO HENRIQUE MARTINS BORGES",
   "email": "pedro.borges@alu.unibalsas.edu.br",
-  "cidade": "São Raimundo das Mangabeiras",
-  "fuso_horario": "America/Araguaina"
+  "language": "português"
 }
 ```
 4. Rota de Perfil ("/ub/mat/{log}&{ps}"): Recebe a matricula(log) e senha(ps) e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://api-ub.pedroplayborges.repl.co/ub/mat/{log}&{ps})
@@ -72,24 +80,24 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) pa
   "qtd": 5,
   "list": [
     {
-      "name": "SER HUMANO, CULTURA E SOCIEDADE - SI",
-      "link": "https://digital.unibalsas.edu.br/course/view.php?id=869"
+      "name": "ANÁLISE E ENGENHARIA DE SISTEMAS",
+      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2055"
     },
     {
-      "name": "ALGORITMOS E PROGRAMAÇÃO AVANÇADA",
-      "link": "https://digital.unibalsas.edu.br/course/view.php?id=870"
+      "name": "EMPREENDEDORISMO",
+      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2335"
     },
     {
-      "name": "SISTEMAS OPERACIONAIS",
-      "link": "https://digital.unibalsas.edu.br/course/view.php?id=858"
+      "name": "LABORATÓRIO DE REDES E AUTOMAÇÃO",
+      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2353"
     },
     {
-      "name": "INOVAÇÃO E NEGÓCIOS COM SISTEMAS DE INFORMAÇÃO",
-      "link": "https://digital.unibalsas.edu.br/course/view.php?id=855"
+      "name": "PARADIGMAS DE PROGRAMAÇÃO E INTERFACES",
+      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2355"
     },
     {
-      "name": "LABORATÓRIO DE BANCO DE DADOS",
-      "link": "https://digital.unibalsas.edu.br/course/view.php?id=856"
+      "name": "REDES DE COMPUTADORES",
+      "link": "https://ead.unibalsas.edu.br/course/view.php?id=2336"
     }
   ]
 }
