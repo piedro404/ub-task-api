@@ -6,15 +6,16 @@ Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde �
 
 OBS: Foi feito usando FASTAPI e Webdriver, pelo fato de não ter acesso ao banco de dados, podendo ocasionar erros. A aplicação teste também pode cair a qualquer momento, pelo fato de ser provisoria
 
+![2023-08-10_10h04_27](https://github.com/piedro404/ub-task-api/assets/88720549/74004a25-6ec8-458d-84ea-f83b04ccb33b)
+
 ### Tarefas
-![2023-07-25_18h44_55](https://github.com/piedro404/ub-task-api/assets/88720549/f3f03d18-f666-4aad-8d8b-c0e44ac109fe)
-![2023-07-25_18h41_42](https://github.com/piedro404/ub-task-api/assets/88720549/ce3beaef-2208-42da-9129-adc527d6986e)
+![2023-08-10_01h19_34](https://github.com/piedro404/ub-task-api/assets/88720549/96ec8d1d-7e26-4ac5-8d4f-e66296fddb16)
 
 ### Perfil
-![2023-07-25_18h40_30](https://github.com/piedro404/ub-task-api/assets/88720549/b16e6162-e086-45aa-8e42-72f13029fa2b)
+![2023-08-10_01h20_07](https://github.com/piedro404/ub-task-api/assets/88720549/b0ba6187-1b07-4da1-9421-a0a315753a56)
 
 ### Cursos
-![2023-07-25_18h42_34](https://github.com/piedro404/ub-task-api/assets/88720549/e0833c94-4832-4bde-b1d7-ea6e4a7b8688)
+![2023-08-10_01h20_28](https://github.com/piedro404/ub-task-api/assets/88720549/ef1f9596-b79d-4369-89b2-26e70f583651)
 
 ## Recursos
 - Tarefas: Verifica se há tarefas e as retornas, como nome da matéria e da atividade, data de entrega e link da atividade.
