@@ -40,7 +40,7 @@ class ub:
                 try:
                     nome = tarefa.find('h3').text.strip()
                     link_url = tarefa.find('a', class_='btn')['href']
-                    detalhes = tarefa.find_all('li')
+                    detalhes = tarefa.find('ul', class_='mb0').find_all('li')
                     dia_semana, data, hora_limite = detalhes[0].text.strip().split(',')
                     materia = detalhes[2].find('a').text.strip()
                     
