@@ -38,8 +38,13 @@ class ub:
 
             for tarefa in tarefas:
                 try:
-                    nome = tarefa.find('h3').text.strip()
                     link_url = tarefa.find('a', class_='btn')['href']
+                    status = BeautifulSoup(session.get(link_url).content, 'html.parser').find('div', class_='submissionstatustable').find('td', class_='cell c1 lastcol').text
+
+                    if(status != "Nenhum envio foi feito ainda"):
+                        continue
+
+                    nome = tarefa.find('h3').text.strip()
                     detalhes = tarefa.find('ul', class_='mb0').find_all('li')
                     dia_semana, data, hora_limite = detalhes[0].text.strip().split(',')
                     materia = detalhes[2].find('a').text.strip()
