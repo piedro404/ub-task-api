@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from to_check import to_check
+from datetime import datetime, timedelta
 
 def web_login(mtr, ps):
     login_url = "https://ead.unibalsas.edu.br/login/index.php"
@@ -39,14 +40,22 @@ class ub:
             for tarefa in tarefas:
                 try:
                     link_url = tarefa.find('a', class_='btn')['href']
-                    status = BeautifulSoup(session.get(link_url).content, 'html.parser').find('div', class_='submissionstatustable').find('td', class_='cell c1 lastcol').text
+                    status = BeautifulSoup(session.get(link_url).content, 'html.parser').find('div', class_='submissionstatustable').find('td').text
 
                     if(status != "Nenhum envio foi feito ainda"):
                         continue
 
                     nome = tarefa.find('h3').text.strip()
                     detalhes = tarefa.find('ul', class_='mb0').find_all('li')
-                    dia_semana, data, hora_limite = detalhes[0].text.strip().split(',')
+                    time = detalhes[0].text.strip().split(',')
+                    if len(time)==3:
+                        dia_semana, data, hora_limite = time
+                    else:
+                        data_de_amanha = datetime.now() + timedelta(days=1)
+                        nomes_meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+                        dia_semana, data, hora_limite = time[0], f"{data_de_amanha.day} {nomes_meses[data_de_amanha.month -1]}",time[1]
+
                     materia = detalhes[2].find('a').text.strip()
                     
                     a = {
