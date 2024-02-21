@@ -11,8 +11,8 @@ def home():
         "endpoints": {
             "home": "/",
             "ub": {
-                "ub_atividades": "/ub/atividades",
-                "ub_perfil": "/ub/perfil",
+                "ub_profile": "/ub/profile",
+                "ub_task": "/ub/task",
             }
         },
         "documentation": "/docs",
