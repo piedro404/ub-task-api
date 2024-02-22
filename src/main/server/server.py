@@ -10,6 +10,3 @@ CORS(app)
 
 app.register_blueprint(app_routes_bp)
 app.register_blueprint(ub_routes_bp)
-
-
-
