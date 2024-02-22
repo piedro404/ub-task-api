@@ -11,8 +11,8 @@ def search_profile():
     http_request = HttpRequest(body=request.json)
     http_response = ub_profile_view.validate_and_search(http_request)
 
-    return jsonify({"resp": "ok"}), 200
+    return jsonify(http_response.body), http_response.status_code
 
 @ub_routes_bp.route('/ub/task', methods=['POST'])
 def search_task():
-    return jsonify(http_response.body), http_response.status_code
+    return jsonify({"resp": "ok"}), 200

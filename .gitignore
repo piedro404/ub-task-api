@@ -4,3 +4,4 @@ env/
 .vercel
 # vercel.json
 .venv/
+teste.*
