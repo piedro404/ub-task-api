@@ -12,6 +12,7 @@ def email_validator(email):
         return False
 
 class UBHandler:
+    
     '''
         Responsibility for interaction on the UB Website with Selenium
     '''

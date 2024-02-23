@@ -2,6 +2,7 @@ from typing import Dict
 from src.drivers.ub_handler import UBHandler
 
 class UbProfileController:
+    
     '''
         Responsability for implementing business rules
     '''

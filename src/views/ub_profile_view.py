@@ -3,6 +3,7 @@ from src.views.http_types.http_response import HttpResponse
 from src.controllers.ub_profile_controller import UbProfileController
 
 class UBProfileView:
+    
     '''
         Responsability for interacting with HTTP
     '''

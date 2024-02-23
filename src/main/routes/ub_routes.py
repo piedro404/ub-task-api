@@ -5,6 +5,9 @@ from src.views.ub_profile_view import UBProfileView
 # Errors
 from src.errors.error_handler import error_handler
 
+# Validator
+from src.validators.ub_validator import ub_validator
+
 ub_routes_bp = Blueprint('ub_routes', __name__)
 
 @ub_routes_bp.route('/ub/profile', methods=['POST'])
@@ -12,6 +15,7 @@ def search_profile():
     http_response = None
 
     try:
+        ub_validator(request)
         ub_profile_view = UBProfileView()
         
         http_request = HttpRequest(body=request.json)
