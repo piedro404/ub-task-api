@@ -4,9 +4,9 @@ from typing import Dict
 import re
 
 def email_validator(email):
-    padrao_email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    default_email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
     
-    if re.match(padrao_email, email):
+    if re.match(default_email, email):
         return True
     else:
         return False
