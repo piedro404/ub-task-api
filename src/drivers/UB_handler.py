@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from typing import Dict
 import re
 
-
 def email_validator(email):
     padrao_email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
     
@@ -15,6 +14,8 @@ def email_validator(email):
 class UBHandler:
     def __init__(self) -> None:
         self.url_login = "https://ead.unibalsas.edu.br/login/index.php"
+        self.url_tasks = "https://ead.unibalsas.edu.br/calendar/view.php?view=upcoming"
+        self.url_profile = "https://ead.unibalsas.edu.br/user/profile.php"
 
     def __web_login(self, login: str, password: str) -> requests.Session():
         session = requests.Session()
@@ -37,9 +38,27 @@ class UBHandler:
 
         return session
     
+    def ub_search_profile(self, login: str, password: str) -> Dict:
+        session = self.__web_login(login, password)
+        response = session.get(self.url_profile)
+        profile = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
+            
+        name = f"{profile[0].text.strip()} {profile[1].text.strip()}"
+        email = profile[5].text.strip()
+        language = profile[2].text.strip()
+
+        session.close()
+
+        return {
+            "status": True,
+            "name": name,
+            "email": email,
+            "language": language
+        }
+    
     def ub_search_task(self, login: str, password: str) -> Dict:
         session = self.__web_login(login, password)
-        response = session.get("https://ead.unibalsas.edu.br/calendar/view.php?view=upcoming")
+        response = session.get(self.url_tasks)
         tasks_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='calendarwrapper').find_all('div', class_='details')
 
         tasks = []
