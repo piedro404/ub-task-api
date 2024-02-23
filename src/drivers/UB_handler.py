@@ -12,6 +12,10 @@ def email_validator(email):
         return False
 
 class UBHandler:
+    '''
+        Responsibility for interaction on the UB Website with Selenium
+    '''
+
     def __init__(self) -> None:
         self.url_login = "https://ead.unibalsas.edu.br/login/index.php"
         self.url_tasks = "https://ead.unibalsas.edu.br/calendar/view.php?view=upcoming"
@@ -20,7 +24,6 @@ class UBHandler:
     def __web_login(self, login: str, password: str) -> requests.Session():
         session = requests.Session()
 
-        # POST the login form
         response = session.get(self.url_login)
         soup = BeautifulSoup(response.content, 'html.parser')
         token = soup.find('input', {'name': 'logintoken'})['value']
