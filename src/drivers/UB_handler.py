@@ -44,20 +44,19 @@ class UBHandler:
     def ub_search_profile(self, login: str, password: str) -> Dict:
         session = self.__web_login(login, password)
         response = session.get(self.url_profile)
-        profile = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
-            
-        name = f"{profile[0].text.strip()} {profile[1].text.strip()}"
-        email = profile[5].text.strip()
-        language = profile[2].text.strip()
+        profile_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
+        
+        profile = []
+
+        profile.append({
+                "name": f"{profile_content[0].text.strip().title()} {profile_content[1].text.strip().title()}",
+                "email": profile_content[5].text.strip(),
+                "language": profile_content[2].text.strip()
+            })
 
         session.close()
 
-        return {
-            "status": True,
-            "name": name,
-            "email": email,
-            "language": language
-        }
+        return profile
     
     def ub_search_task(self, login: str, password: str) -> Dict:
         session = self.__web_login(login, password)
