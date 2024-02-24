@@ -17,7 +17,7 @@ class UbTaskController:
     def __search_task(self, login: str, password: str) -> Dict:
         ub_handler = UBHandler()
         login = login_data_processing(login)
-        tasks = ub_handler.ub_search_profile(login, password)
+        tasks = ub_handler.ub_search_task(login, password)
 
         return tasks
     
