@@ -82,7 +82,7 @@ class UBHandler:
                     "name": name,
                     "day_week": day_week,
                     "date": date.strip(),
-                    "time_limit": time_limit.strip(),
+                    "time_limit": time_limit.strip().replace('  ', ' '),
                     "url_task": url_task
                 }
                 tasks.append(task)
