@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "src/main/server/server.py"
     }
-  ],
-  "functions": {
-    "src/main/server/server.py": {
-      "includeFiles": "src/drivers/ub_handler.py"
-    }
-  }
+  ]
 }
