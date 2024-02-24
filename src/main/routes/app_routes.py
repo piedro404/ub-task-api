@@ -1,4 +1,5 @@
-from flask import Blueprint, request, jsonify
+import os
+from flask import Blueprint, request, jsonify, send_from_directory
 
 app_routes_bp = Blueprint('app_routes', __name__)
 
@@ -23,3 +24,8 @@ def home():
             "linkedin": "pedrohenrique404"
         }
     }), 200
+
+@app_routes_bp.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app_routes_bp.root_path, '../../static'),
+                          'favicon.ico')
