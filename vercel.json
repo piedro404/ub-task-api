@@ -8,11 +8,5 @@
       "src": "/(.*)",
       "dest": "run.py"
     }
-  ],
-  "functions": {
-    "api": {
-      "runtime": "python3.9",
-      "handler": "run.app"
-    }
-  }
+  ]
 }
