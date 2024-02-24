@@ -1,5 +1,6 @@
 from typing import Dict
 from src.drivers.ub_handler import UBHandler
+from .data_processing.login_data_processing import login_data_processing
 
 class UbProfileController:
     
@@ -15,6 +16,7 @@ class UbProfileController:
 
     def __search_profile(self, login: str, password: str) -> Dict:
         ub_handler = UBHandler()
+        login = login_data_processing(login)
         profile = ub_handler.ub_search_profile(login, password)
 
         return profile

@@ -1,15 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from typing import Dict
-import re
-
-def email_validator(email):
-    default_email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-    
-    if re.match(default_email, email):
-        return True
-    else:
-        return False
+from src.errors.error_types.http_unauthorized import HttpUnauthorizedError
 
 class UBHandler:
     
@@ -29,9 +21,6 @@ class UBHandler:
         soup = BeautifulSoup(response.content, 'html.parser')
         token = soup.find('input', {'name': 'logintoken'})['value']
 
-        if(email_validator(login) == False and len(login) == 8):
-            login = f"{login[0:2]}.{login[2:3]}.{login[3:8]}"
-
         login = {
             'username': login,
             'password': password,
@@ -41,11 +30,16 @@ class UBHandler:
         session.post(self.url_login, data=login)
 
         return session
+        
     
     def ub_search_profile(self, login: str, password: str) -> Dict:
-        session = self.__web_login(login, password)
-        response = session.get(self.url_profile)
-        profile_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
+        try:
+            session = self.__web_login(login, password)
+            response = session.get(self.url_profile)
+            profile_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
+        
+        except:
+            raise HttpUnauthorizedError("Invalid login credentials. Please check your email and password.")
         
         profile = []
 
