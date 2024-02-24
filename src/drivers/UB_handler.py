@@ -54,9 +54,13 @@ class UBHandler:
         return profile
     
     def ub_search_task(self, login: str, password: str) -> Dict:
-        session = self.__web_login(login, password)
-        response = session.get(self.url_tasks)
-        tasks_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='calendarwrapper').find_all('div', class_='details')
+        try:
+            session = self.__web_login(login, password)
+            response = session.get(self.url_tasks)
+            tasks_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='calendarwrapper').find_all('div', class_='details')
+
+        except:
+            raise HttpUnauthorizedError("Invalid login credentials. Please check your email and password.")
 
         tasks = []
 
@@ -88,10 +92,4 @@ class UBHandler:
             
         session.close()
 
-        return {
-            "status": True,
-            "find_task": len(tasks) > 0,
-            "description":f"Há {len(tasks)} atividade(s) pendente(s)!",
-            "amount_task": len(tasks),
-            "list_tasks": tasks
-        }
+        return tasks
