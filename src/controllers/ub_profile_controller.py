@@ -1,5 +1,5 @@
 from typing import Dict
-from ..drivers.ub_handler import UBHandler
+from src.drivers.ub_handler import UBHandler
 from .data_processing.login_data_processing import login_data_processing
 
 class UbProfileController:
