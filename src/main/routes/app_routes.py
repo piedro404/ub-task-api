@@ -24,8 +24,3 @@ def home():
             "linkedin": "pedrohenrique404"
         }
     }), 200
-
-@app_routes_bp.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app_routes_bp.root_path, '../../static'),
-                          'favicon.ico')
