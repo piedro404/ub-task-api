@@ -78,8 +78,8 @@ class UBHandler:
                 matter = details[2].find('a').text.strip()
                     
                 task = {
-                    "mat": matter,
-                    "name": name,
+                    "matter": matter,
+                    "task_name": name,
                     "day_week": day_week,
                     "date": date.strip(),
                     "time_limit": time_limit.strip().replace('  ', ' '),
