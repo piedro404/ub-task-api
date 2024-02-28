@@ -9,10 +9,10 @@ Esta é uma API de busca de tarefa na UB Virtual, plataforma da faculdade onde �
 ### Swagger 📑
 <img width="930" alt="2024-02-25_12h12_11" src="https://github.com/piedro404/ub-task-api/assets/88720549/2fd5279c-5c4b-4c44-a178-25f9f5d63533">
 
-### Tarefas 📚
-<img width="876" alt="2024-02-25_12h30_16" src="https://github.com/piedro404/ub-task-api/assets/88720549/f4ba3fb6-0f7e-4d8b-8c51-564c5f02a93f">
-
 ### Perfil 🙍
+<img width="876" alt="2024-02-28_13h55_14" src="https://github.com/piedro404/ub-task-api/assets/88720549/5819b873-ff1f-474c-b9bd-5bf23a4d7b9c">
+
+### Tarefas 📚
 <img width="876" alt="2024-02-25_12h33_15" src="https://github.com/piedro404/ub-task-api/assets/88720549/88f70993-31d0-4855-97f9-6d6a8b78b2f9">
 
 # Recursos da API 🔨
