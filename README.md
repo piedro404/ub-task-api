@@ -40,7 +40,7 @@ A aplicação funciona assim:
 Quando a API receber uma solicitação URL com tal função, seja por GET ou POST, ela executa as funções conforme a rota pre-estabelecida, realiza o login e realiza uma busca a estrutura do site bruta, retornando uma resposta em formato JSON. 
 
 ## Como usar 💁‍♀️
-1. Rota principal ("/"): Retorna um JSON com informações sobre a API. <br>(https://ub-task-api.vercel.app/)
+1. Rota principal ("/"): Retorna um JSON com informações sobre a API. <br>(https://ub-task-api.vercel.app)
 
 ```bash
 {
@@ -63,7 +63,7 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
   "version": "3.0v"
 }
 ```
-2. Rota de Tarefas ("/ub/task"): Recebe a matricula/email(login) e senha(password) que deverá se enviada no body de uma requisição por POST e retorna um JSON com o resultado da pesquisa das tarefas. <br>(https://ub-task-api.vercel.app/ub/task/)
+2. Rota de Tarefas ("/ub/task"): Recebe a matricula/email(login) e senha(password) que deverá se enviada no body de uma requisição por POST e retorna um JSON com o resultado da pesquisa das tarefas. <br>(https://ub-task-api.vercel.app/ub/task)
 
 ```bash
 {
@@ -85,7 +85,7 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
   }
 }
 ```
-3. Rota de Perfil ("/ub/profile/"): Recebe a matricula/email(login) e senha(password) que deverá se enviada no body de uma requisição por POST e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://ub-task-api.vercel.app/ub/profile/)
+3. Rota de Perfil ("/ub/profile/"): Recebe a matricula/email(login) e senha(password) que deverá se enviada no body de uma requisição por POST e retorna um JSON com o resultado da pesquisa do perfil. <br>(https://ub-task-api.vercel.app/ub/profile)
 
 ```bash
 {
