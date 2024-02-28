@@ -84,13 +84,11 @@
             "content": {
               "application/json": {
                 "example": {
-                  "profile": [
-                    {
-                      "email": "pedro.borges@alu.unibalsas.edu.br",
-                      "language": "português",
-                      "name": "Pedro Henrique Martins Borges"
-                    }
-                  ],
+                  "profile": {
+                    "email": "pedro.borges@alu.unibalsas.edu.br",
+                    "language": "português",
+                    "name": "Pedro Henrique Martins Borges"
+                  },
                   "status": true
                 }
               }
@@ -101,12 +99,10 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "Bad Request",
-                      "details": "Invalid request. Please check your input and try again."
-                    }
-                  ],
+                  "errors": {
+                    "title": "Bad Request",
+                    "details": "Invalid request. Please check your input and try again."
+                  },
                   "status": false
                 }
               }
@@ -117,12 +113,10 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "Unauthorized",
-                      "details": "Invalid login credentials. Please check your email and password."
-                    }
-                  ],
+                  "errors": {
+                    "title": "Unauthorized",
+                    "details": "Invalid login credentials. Please check your email and password."
+                  },
                   "status": false
                 }
               }
@@ -133,19 +127,17 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "UnprocessableEntity",
-                      "details": {
-                        "login": [
-                          "required field"
-                        ],
-                        "password": [
-                          "required field"
-                        ]
-                      }
+                  "errors": {
+                    "title": "UnprocessableEntity",
+                    "details": {
+                      "login": [
+                        "required field"
+                      ],
+                      "password": [
+                        "required field"
+                      ]
                     }
-                  ],
+                  },
                   "status": false
                 }
               }
@@ -157,12 +149,10 @@
               "application/json": {
                 "example": {
                   "status": false,
-                  "errors": [
-                    {
-                      "title": "Server Error",
-                      "details": "Error details go here"
-                    }
-                  ]
+                  "errors": {
+                    "title": "Server Error",
+                    "details": "Error details go here"
+                  }
                 }
               }
             }
@@ -219,12 +209,10 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "Bad Request",
-                      "details": "Invalid request. Please check your input and try again."
-                    }
-                  ],
+                  "errors": {
+                    "title": "Bad Request",
+                    "details": "Invalid request. Please check your input and try again."
+                  },
                   "status": false
                 }
               }
@@ -235,12 +223,10 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "Unauthorized",
-                      "details": "Invalid login credentials. Please check your email and password."
-                    }
-                  ],
+                  "errors": {
+                    "title": "Unauthorized",
+                    "details": "Invalid login credentials. Please check your email and password."
+                  },
                   "status": false
                 }
               }
@@ -251,19 +237,17 @@
             "content": {
               "application/json": {
                 "example": {
-                  "errors": [
-                    {
-                      "title": "UnprocessableEntity",
-                      "details": {
-                        "login": [
-                          "required field"
-                        ],
-                        "password": [
-                          "required field"
-                        ]
-                      }
+                  "errors": {
+                    "title": "UnprocessableEntity",
+                    "details": {
+                      "login": [
+                        "required field"
+                      ],
+                      "password": [
+                        "required field"
+                      ]
                     }
-                  ],
+                  },
                   "status": false
                 }
               }
@@ -275,12 +259,10 @@
               "application/json": {
                 "example": {
                   "status": false,
-                  "errors": [
-                    {
-                      "title": "Server Error",
-                      "details": "Error details go here"
-                    }
-                  ]
+                  "errors": {
+                    "title": "Server Error",
+                    "details": "Error details go here"
+                  }
                 }
               }
             }
