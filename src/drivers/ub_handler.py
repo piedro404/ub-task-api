@@ -40,14 +40,12 @@ class UBHandler:
         
         except:
             raise HttpUnauthorizedError("Invalid login credentials. Please check your email and password.")
-        
-        profile = []
 
-        profile.append({
+        profile = {
                 "name": f"{profile_content[0].text.strip().title()} {profile_content[1].text.strip().title()}",
                 "email": profile_content[5].text.strip(),
                 "language": profile_content[2].text.strip()
-            })
+            }
 
         session.close()
 
