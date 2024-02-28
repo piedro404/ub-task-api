@@ -89,13 +89,11 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
 
 ```bash
 {
-  "profile": [
-    {
+  "profile": {
       "email": "pedro.borges@alu.unibalsas.edu.br",
       "language": "português",
       "name": "Pedro Henrique Martins Borges"
-    }
-  ],
+    },
   "status": true
 }
 ```
