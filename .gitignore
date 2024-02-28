@@ -1,5 +1,7 @@
 __pycache__/
+# .vscode/
 env/
-.vercel/
+.vercel
 # vercel.json
 .venv/
+teste.*
