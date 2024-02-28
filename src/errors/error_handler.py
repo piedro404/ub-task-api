@@ -15,10 +15,10 @@ def error_handler(error: Exception) -> HttpResponse:
             status_code=error.status_code,
             body={
                 "status":False,
-                "errors": [{
+                "errors": {
                     "title": error.name,
                     "details": error.message
-                }]
+                }
             }
         )
     
@@ -27,10 +27,10 @@ def error_handler(error: Exception) -> HttpResponse:
             status_code=error.status_code,
             body={
                 "status":False,
-                "errors": [{
+                "errors": {
                     "title": error.name,
                     "details": error.message
-                }]
+                }
             }
         )
     
@@ -39,10 +39,10 @@ def error_handler(error: Exception) -> HttpResponse:
             status_code=error.status_code,
             body={
                 "status":False,
-                "errors": [{
+                "errors": {
                     "title": error.name,
                     "details": error.message
-                }]
+                }
             }
         )
     
@@ -50,9 +50,9 @@ def error_handler(error: Exception) -> HttpResponse:
         status_code=500,
         body={
             "status":False,
-            "errors": [{
+            "errors": {
                 "title": "Server Error",
                 "details": str(error)
-            }]
+            }
         }
     )
