@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from typing import Dict
 from src.errors.error_types.http_unauthorized import HttpUnauthorizedError
+from datetime import datetime, timedelta
 
 class UBHandler:
     
@@ -72,7 +73,15 @@ class UBHandler:
 
                 name = task_content.find('h3').text.strip()
                 details = task_content.find('ul', class_='mb0').find_all('li')
-                day_week, date, time_limit = details[0].text.strip().split(',')
+                time = details[0].text.strip().split(',')
+                if len(time)==3:
+                    day_week, date, time_limit = time
+                else:
+                    day_time = datetime.now()
+                    if time[0] != "Hoje":
+                        day_time += timedelta(days=1)
+                    months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+                    day_week, date, time_limit = time[0], f"{day_time.day} {months[day_time.month -1]}",time[1]
                 matter = details[2].find('a').text.strip()
                     
                 task = {
@@ -85,8 +94,8 @@ class UBHandler:
                 }
                 tasks.append(task)
 
-            except:
-                continue
+            except Exception as e:
+                print(e)
             
         session.close()
 
