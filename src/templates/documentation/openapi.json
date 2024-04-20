@@ -85,9 +85,11 @@
               "application/json": {
                 "example": {
                   "profile": {
-                    "email": "pedro.borges@alu.unibalsas.edu.br",
+                    "email": "augustomatheus233@gmail.com",
                     "language": "português",
-                    "name": "Pedro Henrique Martins Borges"
+                    "name": "Matheus Augusto Silva Dos Santos",
+                    "user_initials": "MA",
+                    "user_picture": "https://ead.unibalsas.edu.br/user/pix.php/2228/f1.jpg"
                   },
                   "status": true
                 }
