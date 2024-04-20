@@ -8,7 +8,7 @@ def home():
     return jsonify({
         "status": True,
         "message": "Welcome to the UB API!",
-        "version": "3.0v",
+        "version": "3.1v",
         "endpoints": {
             "home": "/",
             "ub": {
