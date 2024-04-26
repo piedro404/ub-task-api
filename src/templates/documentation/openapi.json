@@ -3,7 +3,7 @@
   "info": {
     "title": "UB Task API",
     "description": "A Python API to access and manage academic tasks at Unibalsas. Automate the acquisition and management of activities with ease. 🎓📚",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "contact": {
       "email": "pedro.borges@alu.unibalsas.edu.br"
     }
@@ -52,7 +52,7 @@
                   },
                   "message": "Welcome to the UB API!",
                   "status": true,
-                  "version": "3.0v"
+                  "version": "3.1v"
                 }
               }
             }
@@ -85,9 +85,11 @@
               "application/json": {
                 "example": {
                   "profile": {
-                    "email": "pedro.borges@alu.unibalsas.edu.br",
+                    "email": "augustomatheus233@gmail.com",
                     "language": "português",
-                    "name": "Pedro Henrique Martins Borges"
+                    "name": "Matheus Augusto Silva Dos Santos",
+                    "user_initials": "MA",
+                    "user_picture": "https://ead.unibalsas.edu.br/user/pix.php/2228/f1.jpg"
                   },
                   "status": true
                 }

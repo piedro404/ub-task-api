@@ -37,15 +37,20 @@ class UBHandler:
         try:
             session = self.__web_login(login, password)
             response = session.get(self.url_profile)
-            profile_content = BeautifulSoup(response.content, 'html.parser').find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
-        
+            profile_content = BeautifulSoup(response.content, 'html.parser')
+            profile_img = profile_content.find('div', class_='instructor_thumb text-center').find('img').attrs['src']
+            profile_details = profile_content.find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
+            profile_name = f"{profile_details[0].text.strip().title()} {profile_details[1].text.strip().title()}".split()
+            
         except:
             raise HttpUnauthorizedError("Invalid login credentials. Please check your email and password.")
 
         profile = {
-                "name": f"{profile_content[0].text.strip().title()} {profile_content[1].text.strip().title()}",
-                "email": profile_content[5].text.strip(),
-                "language": profile_content[2].text.strip()
+                "name": " ".join(profile_name),
+                "email": profile_details[5].text.strip(),
+                "language": profile_details[2].text.strip(),
+                "user_initials": f"{profile_name[0][0]}{profile_name[1][0]}",
+                "user_picture": profile_img,
             }
 
         session.close()

@@ -90,10 +90,12 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
 ```bash
 {
   "profile": {
-      "email": "pedro.borges@alu.unibalsas.edu.br",
-      "language": "português",
-      "name": "Pedro Henrique Martins Borges"
-    },
+    "email": "augustomatheus233@gmail.com",
+    "language": "português",
+    "name": "Matheus Augusto Silva Dos Santos",
+    "user_initials": "MA",
+    "user_picture": "https://ead.unibalsas.edu.br/user/pix.php/2228/f1.jpg"
+  },
   "status": true
 }
 ```
