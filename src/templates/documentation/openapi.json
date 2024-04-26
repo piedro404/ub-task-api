@@ -14,7 +14,7 @@
       "description": "Main Server"
     },
     {
-      "url": "https://ub-task-api-git-developer-piedro404.vercel.app",
+      "url": "https://ub-task-api-gamn-git-developer-piedro404s-projects.vercel.app",
       "description": "Test Server"
     },
     {
@@ -52,7 +52,7 @@
                   },
                   "message": "Welcome to the UB API!",
                   "status": true,
-                  "version": "3.1v"
+                  "version": "3.0.2v"
                 }
               }
             }

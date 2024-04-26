@@ -38,7 +38,7 @@ class UBHandler:
             session = self.__web_login(login, password)
             response = session.get(self.url_profile)
             profile_content = BeautifulSoup(response.content, 'html.parser')
-            profile_img = profile_content.find('div', class_='instructor_thumb text-center').find('img').attrs['src']
+            profile_img = profile_content.find('div', class_='page-header-image mr-2').find('img').attrs['src']
             profile_details = profile_content.find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
             profile_name = f"{profile_details[0].text.strip().title()} {profile_details[1].text.strip().title()}".split()
             
