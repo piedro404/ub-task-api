@@ -38,7 +38,11 @@ class UBHandler:
             session = self.__web_login(login, password)
             response = session.get(self.url_profile)
             profile_content = BeautifulSoup(response.content, 'html.parser')
-            profile_img = profile_content.find('div', class_='page-header-image mr-2').find('img').attrs['src']
+            try:
+                profile_img = profile_content.find('div', class_='page-header-image mr-2').find('img').attrs['src']
+            except:
+                profile_img = profile_content.find('div', class_='instructor_thumb text-center').find('img').attrs['src']
+
             profile_details = profile_content.find('div', class_='selected_filter_widget siderbar_contact_widget style2 mb30').find_all('i')
             profile_name = f"{profile_details[0].text.strip().title()} {profile_details[1].text.strip().title()}".split()
             
@@ -47,7 +51,7 @@ class UBHandler:
 
         profile = {
                 "name": " ".join(profile_name),
-                "email": profile_details[5].text.strip(),
+                "email": profile_details[-1].text.strip(),
                 "language": profile_details[2].text.strip(),
                 "user_initials": f"{profile_name[0][0]}{profile_name[1][0]}",
                 "user_picture": profile_img,
